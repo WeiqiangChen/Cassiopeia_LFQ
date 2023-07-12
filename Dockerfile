@@ -21,9 +21,6 @@ RUN R -e "install.packages('BiocManager'); library('BiocManager'); BiocManager::
 
 
 # copy the app to the image
-RUN mkdir /home/rstudio/Cassiopeia_LFQ
-COPY . /home/rstudio/Cassiopeia_LFQ
+COPY . /home/rstudio
 
 EXPOSE 8787
-
-WORKDIR "/home/rstudio/Cassiopeia_LFQ"

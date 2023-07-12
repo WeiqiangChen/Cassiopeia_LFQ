@@ -12,7 +12,7 @@
 
 << set your analysis parameters , echo = FALSE, message = FALSE, warning = FALSE>>=
 
-filename <- "Vignette/vignette_proteinGroups.txt" 
+filename <- "vignette_proteinGroups.txt" 
 groups <- rep(c("ctrl+N","ctrl-N", "PD1+N","PD1-N"),each=3)
 export_matrix <- TRUE
 export_amica <- TRUE

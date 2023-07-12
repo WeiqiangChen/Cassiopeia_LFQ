@@ -11,6 +11,26 @@ Cassiopeia LFQ is an R script that uses knitr/LaTeX to automatically execute and
 
 ## Change Log
 
+### 4.7 2023-07-12
+1) fix a error from R 4.2  "R Warning 'length(x) = 2 > 1' in coercion to 'logical(1)"
+2) Dockerfile is added. 
+
+#### Clone the repository
+git clonehttps://github.com/WeiqiangChen/Cassiopeia_LFQ.git
+#### Move to the folder
+cd Cassiopeia_LFQ
+#### Build docker image
+docker build -t cassiopeia .
+#### Run build image
+docker run -p 8787:8787 cassiopeia
+#### Go to Rstudio server in Chrome
+http://localhost:8787/
+username: rstudio
+a random password in red is showin in the docker logs.
+#### now you can run the Rnw with vignette file. 
+#### still need to install TidyTex inside Docker image so that compile PDF will work!
+
+
 ### 4.6.6 2023-03-10
 1) Cassiopeia_LFQ is changed to read contaminant.fasta instead of previous con_table.txt. 
 2) con_table.txt is removed. A contaminant.fasta is included. User could use their own contamiant database, just name it to contamiannt.fasta
