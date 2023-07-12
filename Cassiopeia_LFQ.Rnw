@@ -12,7 +12,7 @@
 
 << set your analysis parameters , echo = FALSE, message = FALSE, warning = FALSE>>=
 
-filename <- "vignette_proteinGroups.txt" 
+filename <- "Vignette/vignette_proteinGroups.txt" 
 groups <- rep(c("ctrl+N","ctrl-N", "PD1+N","PD1-N"),each=3)
 export_matrix <- TRUE
 export_amica <- TRUE
@@ -189,7 +189,7 @@ if (!"Gene names" %in% names(df) || sum(df$`Gene names` == "") > 0  ){
       next()
     }
     fasta_headers_split_i <- fasta_headers_split[[i]]
-    if (length(fasta_headers_split_i) > 0 && grepl(fasta_headers_split_i,pattern="GN=")){
+    if (length(fasta_headers_split_i) > 0 & any(grepl(fasta_headers_split_i,pattern="GN="))){
       gene_names_split_i <- substring(fasta_headers_split_i ,first= regexpr(fasta_headers_split_i,pattern="GN=") + 3, last=nchar(fasta_headers_split_i))
     } else{
       gene_names_split_i <- substring(fasta_headers_split_i ,first = 1, last=nchar(fasta_headers_split_i))
