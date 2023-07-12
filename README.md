@@ -16,7 +16,7 @@ Cassiopeia LFQ is an R script that uses knitr/LaTeX to automatically execute and
 2) Dockerfile is added. 
 ```
 ## Clone the repository
-git clonehttps://github.com/WeiqiangChen/Cassiopeia_LFQ.git
+git clone https://github.com/WeiqiangChen/Cassiopeia_LFQ.git
 ## Move to the folder
 cd Cassiopeia_LFQ
 ## Build docker image
